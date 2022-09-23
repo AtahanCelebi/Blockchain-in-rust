@@ -1,18 +1,18 @@
 use blockchainlib::*;
 
 fn main () {
-    let difficulty = 0x000fffffffffffffffffffffffffffff;
+    let difficulty = 0x000fffffffffffffffffffffffffffff; //difficulty is for safety
 
-    let mut genesis_block = Block::new(0, now(), vec![0; 32], vec![
+    let mut genesis_block = Block::new(0, now(), vec![0; 32], vec![     //creating new genesis
         Transaction {
             inputs: vec![ ],
             outputs: vec![
                 transaction::Output {
-                    to_addr: "Ata".to_owned(),
+                    to_addr: "Ata".to_owned(),                              //ownerships for person 1
                     value: 50,
                 },
                 transaction::Output {
-                    to_addr: "Okan".to_owned(),
+                    to_addr: "Okan".to_owned(),                            //ownerships for person 1
                     value: 10,
                 },
             ],
